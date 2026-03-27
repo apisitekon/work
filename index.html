@@ -2,27 +2,125 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>My First PaaS Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio | A.L.I.G.N Standard</title>
     <style>
+        /* Global Styles - Reusable Design  */
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f4f6f8;
+            --text-color: #333;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f6f8;
-            margin-top: 100px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
         }
-        h1 {
-            color: #2c3e50;
+
+        nav {
+            background: var(--primary-color);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        p {
-            color: #555;
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: auto;
+            min-height: 80vh;
+        }
+
+        .hero { text-align: center; background: white; border-radius: 15px; margin-top: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card { background: white; padding: 20px; border-radius: 10px; text-align: center; }
+        
+        img { max-width: 100%; height: auto; border-radius: 8px; }
+        
+        footer { background: var(--primary-color); color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
     </style>
 </head>
 <body>
 
-    <h1>🚀 Hello from PaaS</h1>
-    <p>เว็บไซต์นี้ deploy ด้วย GitHub + Render</p>
-    <img src="https://img.pptvhd36.com/thumbor/2023/09/01/8fcaa83.jpg">ยินดีต้อนรับสู่โลกของ Cloud Computing</img>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1>🚀 ยินดีต้อนรับสู่ Portfolio ของฉัน</h1>
+        <p>ขับเคลื่อนด้วยระบบ A.L.I.G.N Framework</p>
+        <img src="https://via.placeholder.com/600x400" alt="Hero Image">
+    </section>
+
+    <section id="about">
+        <h2>ℹ️ เกี่ยวกับฉัน</h2>
+        <div class="grid">
+            <div>
+                <p>ข้อมูลประวัติย่อของคุณ ระบุทักษะและความเชี่ยวชาญที่นี่</p>
+            </div>
+            <img src="https://via.placeholder.com/400x300" alt="About Image">
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>🛠️ บริการของฉัน</h2>
+        <div class="grid">
+            <div class="card"><h3>Consulting</h3><p>ให้คำปรึกษาด้าน AI</p></div>
+            <div class="card"><h3>Development</h3><p>ออกแบบ Workflow</p></div>
+            <div class="card"><h3>Design</h3><p>ออกแบบ UI/UX</p></div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>🎨 ผลงานที่ผ่านมา</h2>
+        <div class="grid">
+            <div class="card"><img src="https://via.placeholder.com/300x200" alt="Work 1"><p>Project A</p></div>
+            <div class="card"><img src="https://via.placeholder.com/300x200" alt="Work 2"><p>Project B</p></div>
+            <div class="card"><img src="https://via.placeholder.com/300x200" alt="Work 3"><p>Project C</p></div>
+            <div class="card"><img src="https://via.placeholder.com/300x200" alt="Work 4"><p>Project D</p></div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>📞 ติดต่อฉัน</h2>
+        <p>อีเมล: example@email.com</p>
+        <p>Line ID: @yourid</p>
+        <img src="https://via.placeholder.com/800x200" alt="Contact Banner">
+    </section>
+
+    <footer>
+        <p>© 2026 Developed by Build (A.L.I.G.N Agent)</p>
+    </footer>
 
 </body>
 </html>
